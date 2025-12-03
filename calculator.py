@@ -16,7 +16,7 @@ def numbers():
                     result=first_number/second_number
                     print(f"Result is {result}")
                 except:
-                    print("It is not possible to devine by zero")
+                    print("Division by zero is not possible.")
                 
             elif operator=="*":
                 result=first_number*second_number
@@ -32,4 +32,5 @@ def numbers():
     
     
 numbers()
+
 
