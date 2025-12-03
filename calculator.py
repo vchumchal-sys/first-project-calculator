@@ -1,3 +1,4 @@
+
 def numbers():
     result=0
     while True:
@@ -15,8 +16,8 @@ def numbers():
                 try:
                     result=first_number/second_number
                     print(f"Result is {result}")
-                except:
-                    print("Division by zero is not possible.")
+                except ZeroDivisionError:
+                    print("It is not possible to devine by zero")
                 
             elif operator=="*":
                 result=first_number*second_number
@@ -28,6 +29,8 @@ def numbers():
             break
         except ValueError:
             print("The entered value is not a number!")
+
+     
 
     
     
