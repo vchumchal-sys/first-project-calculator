@@ -1,5 +1,3 @@
-
-
 def numbers():
     result=0
     while True:
@@ -13,11 +11,13 @@ def numbers():
             elif operator=="-":
                 result=first_number-second_number
                 print(f"Result is {result}")
-            elif operator =="/" and second_number==0:
-                print("It is not possible to divide by zero")
-            elif operator=="/":
-                result=first_number/second_number
-                print(f"Result is {result}")
+            elif operator =="/":
+                try:
+                    result=first_number/second_number
+                    print(f"Result is {result}")
+                except:
+                    print("It is not possible to devine by zero")
+                
             elif operator=="*":
                 result=first_number*second_number
                 print(f"Result is {result}")
@@ -32,3 +32,4 @@ def numbers():
     
     
 numbers()
+
