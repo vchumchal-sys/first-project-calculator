@@ -1,39 +1,48 @@
-
-def numbers():
-    result=0
+def calculator():
     while True:
         try:
-            first_number=float(input("Enter the first number\n"))
-            second_number=float(input("Enter the second number\n"))
-            operator=input("Choose the operation you want (+, -,*, /)\n")
-            if operator=="+":
-                result=first_number+second_number
-                print(f"Result is {result}")
-            elif operator=="-":
-                result=first_number-second_number
-                print(f"Result is {result}")
+            num1=float(input("Enter the first number.\n"))
+        except ValueError:
+            print("It is not number, try again")
+            continue
+
+        while True:
+            try:
+                num2=float(input("Enter the second number\n"))
+            except ValueError:
+                print("It is not number, try again")
+                continue   
+            operator=input("+,-,*,/")
+            if operator == "+":
+                num1=num1+num2
+                print(num1)
+            elif operator =="-":
+                num1=num1-num2
+                print(num1)
+            elif operator =="*":
+                num1=num1*num2
+                print(num1)
             elif operator =="/":
                 try:
-                    result=first_number/second_number
-                    print(f"Result is {result}")
+                    num1=num1/num2
+                    print(num1)
                 except ZeroDivisionError:
-                    print("It is not possible to devine by zero")
-                
-            elif operator=="*":
-                result=first_number*second_number
-                print(f"Result is {result}")
+                    print("You can not divide by zero!")
+                    continue
             else:
                 print("You can only use the following operators: +, -, /,*.")
-                
 
-            break
-        except ValueError:
-            print("The entered value is not a number!")
+                                
+            new_task=input("Do you want to continue? yes/no\n")
+            if new_task != "yes":
+                break
 
-     
-
+calculator()
+                                        
+                                    
+                                    
     
     
-numbers()
+
 
 
